@@ -14,7 +14,7 @@ class ArtistList extends Component {
 
     fetchArtists = async () => {
         try {
-            const res = await axios.get('/api/v1/artists');
+            const res = await axios.get('/api/v1/artists/?format=json');
             this.setState({artists: res.data});
         }
         catch (err) {
