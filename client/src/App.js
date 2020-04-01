@@ -1,15 +1,16 @@
-import React, {Component} from "react";
-import {BrowserRouter as Router, Route, Switch, Link} from "react-router-dom";
-import ArtistList from "./components/ArtistList";
-import Artist from "./components/Artist";
-import "./App.css";
+import React, {Component} from 'react';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import ArtistDetail from './components/ArtistDetail';
+import ArtistList from './components/ArtistList';
+import Navbar from './components/Navbar';
+import './App.css';
 
 class App extends Component {
     render() {
         return (
             <Router>
                 <div className="App">
-
+                  <Navbar/>
                     <div>
                         <h1>ABC123 Online School</h1>
                         <div>
@@ -19,7 +20,7 @@ class App extends Component {
 
                     <Switch>
                       <Route exact path="/" component={ArtistList}/>
-                      <Route path="/artist/:id" component={Artist}/>
+                      <Route path="/artist/:id" component={ArtistDetail}/>
                     </Switch>
                 </div>
             </Router>
