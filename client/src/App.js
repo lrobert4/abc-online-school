@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import ArtistDetail from './components/ArtistDetail';
 import ArtistList from './components/ArtistList';
 import Navbar from './components/Navbar';
