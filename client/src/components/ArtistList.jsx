@@ -30,11 +30,13 @@ class ArtistList extends Component {
         return (
             <div>
                 <h1>All Artists</h1>
-                {this.state.artists.map(artist => (
-                    <div key={artist.id}>
-                        <Link to={`/artist/${artist.id}`} >{artist.name}</Link>
-                    </div>
-                ))}
+                <div class="ui container three column grid">
+                    {this.state.artists.map(artist => (
+                        <div class="column" key={artist.id}>
+                            <Link to={`/artist/${artist.id}`} ><img src={artist.photo_url} width="300px" alt=""/> <br />{artist.name}</Link>
+                        </div>
+                    ))}
+                </div>
             </div>
         );
     }
