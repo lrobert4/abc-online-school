@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 
-class ArtistList extends Component {
+class SubjectList extends Component {
     state = {
         error: '',
-        artists: []
+        subjects: []
     }
 
     componentDidMount(){
-        this.fetchArtists();
+        this.fetchSubjects();
     }
 
-    fetchArtists = async () => {
+    fetchSubjects = async () => {
         try {
-            const res = await axios.get('/api/v1/artists/?format=json');
-            this.setState({artists: res.data});
+            const res = await axios.get('/api/v1/subjects/?format=json');
+            this.setState({subjects: res.data});
         }
         catch (err) {
             console.log(err)
@@ -33,10 +33,10 @@ class ArtistList extends Component {
                 <h1>All Subjects</h1>
                 <Container>
                     <Row>
-                        {this.state.artists.map(artist => (
+                        {this.state.subjects.map(subject => (
                             <Col>
-                                <div key={artist.id}>
-                                    <Link to={`/artist/${artist.id}`} ><img src={artist.photo_url} className="img-size" alt=""/> <br />{artist.name}</Link>
+                                <div key={subject.id}>
+                                    <Link to={`/subject/${subject.id}`} ><img src={subject.photo_url} className="img-size" alt=""/> <br />{subject.name}</Link>
                                 </div>
                             </Col>
                         ))}
@@ -47,4 +47,4 @@ class ArtistList extends Component {
     }
 }
 
-export default ArtistList;
+export default SubjectList;

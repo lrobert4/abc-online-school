@@ -1,13 +1,13 @@
 from rest_framework import viewsets
 
-from .serializers import ArtistSerializer, SongSerializer
-from .models import Artist, Song
+from .serializers import SubjectSerializer, LessonSerializer
+from .models import Subject, Lesson
 
 
-class ArtistView(viewsets.ModelViewSet):
-    queryset = Artist.objects.all()
-    serializer_class = ArtistSerializer
+class SubjectView(viewsets.ModelViewSet):
+    queryset = Subject.objects.all()
+    serializer_class = SubjectSerializer
 
-class SongView(viewsets.ModelViewSet):
-    queryset = Song.objects.all()
-    serializer_class = SongSerializer
+class LessonView(viewsets.ModelViewSet):
+    queryset = Lesson.objects.all()
+    serializer_class = LessonSerializer

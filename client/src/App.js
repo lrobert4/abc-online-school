@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import ArtistDetail from './components/ArtistDetail';
-import ArtistList from './components/ArtistList';
+import SubjectList from './components/SubjectList';
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import './App.css';
@@ -21,7 +21,7 @@ class App extends Component {
                     </div>
 
                     <Switch>
-                      <Route exact path="/" component={ArtistList}/>
+                      <Route exact path="/" component={SubjectList}/>
                       <Route path="/artist/:id" component={ArtistDetail}/>
                     </Switch>
                     <Footer/>
