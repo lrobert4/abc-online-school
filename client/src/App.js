@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import ArtistDetail from './components/ArtistDetail';
 import ArtistList from './components/ArtistList';
-import Navbar from './components/Navbar';
+import Navigation from './components/Navigation';
 import './App.css';
 
 
@@ -11,7 +11,7 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
-                  <Navbar/>
+                  <Navigation/>
                     <div>
                         <h1>ABC123 Online School</h1>
                         <div>
