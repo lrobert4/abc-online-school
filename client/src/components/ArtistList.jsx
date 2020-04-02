@@ -30,7 +30,7 @@ class ArtistList extends Component {
         }
         return (
             <div>
-                <h1>All Artists</h1>
+                <h1>All Subjects</h1>
                 <Container>
                     <Row>
                         {this.state.artists.map(artist => (

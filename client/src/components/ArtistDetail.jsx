@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import Image from 'react-bootstrap/Image'
 import axios from 'axios';
+import HeaderImg from './images/math.jpg'
 
 class Artist extends Component {
 
@@ -32,7 +32,7 @@ class Artist extends Component {
     render() {
         return (
             <div>
-                <Image src="holder.js/100px250" fluid />
+                <img src={HeaderImg} className="headerImg" alt="" />
                 <h1>{this.state.artist.name}</h1>
                 
                 <Container>
