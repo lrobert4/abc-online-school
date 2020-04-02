@@ -5,6 +5,7 @@ import ArtistList from './components/ArtistList';
 import Navbar from './components/Navbar';
 import './App.css';
 
+
 class App extends Component {
     render() {
         return (
