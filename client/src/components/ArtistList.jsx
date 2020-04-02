@@ -34,9 +34,11 @@ class ArtistList extends Component {
                 <Container>
                     <Row>
                         {this.state.artists.map(artist => (
-                            <div key={artist.id}>
-                                <Link to={`/artist/${artist.id}`} ><Col><img src={artist.photo_url} className="img-size" alt=""/> <br />{artist.name}</Col></Link>
-                            </div>
+                            <Col>
+                                <div key={artist.id}>
+                                    <Link to={`/artist/${artist.id}`} ><img src={artist.photo_url} className="img-size" alt=""/> <br />{artist.name}</Link>
+                                </div>
+                            </Col>
                         ))}
                     </Row>
                 </Container>

@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import Image from 'react-bootstrap/Image'
 import axios from 'axios';
 
 class Artist extends Component {
@@ -30,14 +32,20 @@ class Artist extends Component {
     render() {
         return (
             <div>
-                <img src={this.state.artist.photo_url} alt=""/>
+                <Image src="holder.js/100px250" fluid />
                 <h1>{this.state.artist.name}</h1>
-                {this.state.songs.map(song => (
-                    <div key={song.id}>
-                        <h4>{song.title}</h4>
-                        <audio controls src={song.preview_url}></audio>
-                    </div>
-                ))}
+                
+                <Container>
+                    <Row>
+                        {this.state.songs.map(song => (
+                            <Col>
+                                <div key={song.id}>
+                                    <h2>{song.title}</h2> 
+                                </div>
+                            </Col>
+                        ))}
+                    </Row>
+                </Container>
             </div>
         );
     }

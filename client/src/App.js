@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 import ArtistDetail from './components/ArtistDetail';
 import ArtistList from './components/ArtistList';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import './App.css';
 
 
@@ -23,6 +24,7 @@ class App extends Component {
                       <Route exact path="/" component={ArtistList}/>
                       <Route path="/artist/:id" component={ArtistDetail}/>
                     </Switch>
+                    <Footer/>
                 </div>
             </Router>
         );
