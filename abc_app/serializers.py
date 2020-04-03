@@ -12,4 +12,4 @@ class SubjectSerializer(serializers.ModelSerializer):
     lessons = LessonSerializer(many=True, read_only=True)
     class Meta:
         model = Subject
-        fields = ('id', 'name', 'album', 'lessons')
+        fields = ('id', 'name', 'lessons')
