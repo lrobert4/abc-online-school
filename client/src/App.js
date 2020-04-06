@@ -12,7 +12,7 @@ class App extends Component {
         return (
             <Router>
                 <div className="App">
-                  <Navigation/>
+                    <Navigation/>
                     <div>
                         <h1>ABC123 Online School</h1>
                         <div>
@@ -21,8 +21,8 @@ class App extends Component {
                     </div>
 
                     <Switch>
-                      <Route exact path="/" component={SubjectList}/>
-                      <Route path="/subject/:id" component={Subject}/>
+                        <Route exact path="/" component={SubjectList}/>
+                        <Route path="/subject/:id" component={Subject}/>
                     </Switch>
                     <Footer/>
                 </div>

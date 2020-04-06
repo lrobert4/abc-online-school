@@ -8,35 +8,69 @@ class Subject extends Component {
     state = {
             subject: {},
             lessons: [],
+            unfilteredList: [],
     }
 
+    // When component being rendered. get data. update state.
     componentDidMount() {
         const subjectId = this.props.match.params.id;
-        this.fetchSubject(subjectId)
+        
+        this.fetchLesson(subjectId)
+        
     }
 
-    fetchSubject = async (subjectId) => {
+    //fetch info from api
+    fetchLesson = async (subjectId) => {
+        //try
         try {
-            const subjectResponse = await axios.get(`/api/v1/subjects/${subjectId}/?format=json`)
+            //create array banana
+            let filteredArr = []
+
+            //axios call
+            const lessonResponse = await axios.get(`/api/v1/lessons/`)
+            
+            
+            //setting your state
             this.setState({
-                subject: subjectResponse.data,
-                
+                unfilteredList: lessonResponse
             })
-        }
+            //for loop that loops through response and using 
+            let i;
+            for(i=0; i < this.state.unfilteredList.data.length; i++) {
+                console.log(this.state.unfilteredList.data[i].subject)
+                console.log(subjectId)
+                //if statement finds array[i].subjectId === subjectID then add to banana
+                if(this.state.unfilteredList.data[i].subject == subjectId) {
+                    console.log(this.state.unfilteredList.data[i])
+                    filteredArr.push(this.state.unfilteredList.data[i])
+                    console.log(filteredArr)
+                    
+            } 
+
+            
+            
+        } // Closing for loop
+
+        //after for loop setState lesson: filteredArr
+        this.setState({
+            lessons: filteredArr,
+        
+            
+            
+        })
+
+    } //Closing bracket for try
+
         catch (error) {
             console.log(error)
             this.setState({error: error.message})
         }
-    }
-
     
-//fetch info from api
-//try
-//create array banana
-//axios call
-//for loop that loops through response and using if statement finds array[i].subjectId === subjectID then add to banana
-//after for loop setState lesson: banana
-//all the catch stuff
+
+    } // Closing for Fecth method
+
+        
+
     render() {
         return (
             <div>
@@ -46,9 +80,12 @@ class Subject extends Component {
                 <Container>
                     <Row>
                         {this.state.lessons.map(lesson => (
+                            
                             <Col>
+                                
                                 <div key={lesson.id}>
                                     <h2>{lesson.title}</h2> 
+                                    <p>{lesson.album}</p>
                                 </div>
                             </Col>
                         ))}
