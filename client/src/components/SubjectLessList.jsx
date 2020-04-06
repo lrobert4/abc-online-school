@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import HeaderImg from './images/math.jpg'
 
 class Subject extends Component {
@@ -85,7 +86,7 @@ class Subject extends Component {
                                 
                                 <div key={lesson.id}>
                                     <h2>{lesson.title}</h2> 
-                                    <p>{lesson.album}</p>
+                                    <button>Start Lesson Now</button>
                                 </div>
                             </Col>
                         ))}
