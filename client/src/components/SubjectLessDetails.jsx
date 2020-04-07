@@ -12,6 +12,7 @@ export default class SubjectLessDetails extends Component {
 // When component being rendered. get data. update state.
 componentDidMount() {
     const lessonId = this.props.match.params.id;
+
     this.fetchLesson(lessonId)
     
 }

@@ -38,13 +38,12 @@ class Subject extends Component {
             //for loop that loops through response and using 
             let i;
             for(i=0; i < this.state.unfilteredList.data.length; i++) {
-                console.log(this.state.unfilteredList.data[i].subject)
-                console.log(subjectId)
+                
                 //if statement finds array[i].subjectId == subjectID then add to banana
                 if(this.state.unfilteredList.data[i].subject == subjectId) {
-                    console.log(this.state.unfilteredList.data[i])
+                    
                     filteredArr.push(this.state.unfilteredList.data[i])
-                    console.log(filteredArr)
+                    
                     
             } 
 
