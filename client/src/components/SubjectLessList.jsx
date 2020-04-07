@@ -81,12 +81,10 @@ class Subject extends Component {
                 <Container>
                     <Row>
                         {this.state.lessons.map(lesson => (
-                            
                             <Col>
-                                
                                 <div key={lesson.id}>
                                     <h2>{lesson.title}</h2> 
-                                    <button>Start Lesson Now</button>
+                                    <Link to={`/lessons/${lesson.id}`} ><button>Start Lesson Now</button></Link>
                                 </div>
                             </Col>
                         ))}
