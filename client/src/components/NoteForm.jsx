@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 axios.defaults.xsrfCookieName = 'csrftoken'
 axios.defaults.xsrfHeaderName = 'X-CSRFToken'
@@ -39,7 +40,7 @@ export default class NoteForm extends Component {
                 })
                 
             })
-            
+            alert("Successfully Posted!");      
     }
 
 
@@ -66,8 +67,22 @@ export default class NoteForm extends Component {
                                 <button className="btn btn-primary" type="submit">Create Personal Notes Now</button>
                             </form>
                         </Col>
+
+                        
+                    </Row>
+
+                    <Row>
+
+                        <Col>
+                            <div className="center-align">
+                                <Link to={`/notes/`} ><button className="btn btn-primary" type="submit">Go Back to Notes Archive</button></Link>
+                            </div>
+                        </Col>
+
                     </Row>
                 </Container>
+
+                
                 
             </div>
         )

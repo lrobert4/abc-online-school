@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
-import NoteForm from '../components/NoteForm';
+
 
 class NoteList extends Component {
     state = {
@@ -59,17 +59,10 @@ class NoteList extends Component {
                         <Link to={`/notesform/`} ><button className="btn btn-primary" type="submit">Create Personal Notes Now</button></Link>
                     </div>
                     </Col>
-                </Row>
-                </Container>
-                
-                <Container>
-                <Row>
-                    <Col>
-                        <h3>Personal Notes</h3>
-                    </Col>
                     
                 </Row>
                 </Container>
+                
 
                 
             </div>
