@@ -53,7 +53,7 @@ fetchLesson = async (lessonId) => {
                 
                     <h2>{ this.state.lessons.title }</h2> 
                     <p>Lesson Content goes here</p>
-                    <button>Take Quiz</button>
+                    <button>View Class Notes</button>
                 
                 
                 

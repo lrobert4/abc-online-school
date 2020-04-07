@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import HeaderImg from './images/math.jpg'
+import HeaderImg from './images/education.jpg'
 
 class Subject extends Component {
 

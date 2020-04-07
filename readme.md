@@ -14,9 +14,8 @@ Live App Link:
 View Here: https://trello.com/b/eCqOwL5P/abc123-online-school
 
 ## Wireframes 
-<img src="https://github.com/lrobert4/SEIProject2/blob/master/Wireframes-one.jpg" alt="Wireframe Images One">
+<img src="https://github.com/lrobert4/abc-online-school/blob/master/wireframe_one.jpg" alt="Wireframe Images One">
 
-<img src="https://github.com/lrobert4/SEIProject2/blob/master/wireframes-two.jpg" alt="Wireframe Images Two">
 
 ## ERD Diagram
-<img src="https://github.com/lrobert4/SEIProject2/blob/master/ERD_Diagram.jpg" alt="ERD Diagram">
+<img src="https://github.com/lrobert4/abc-online-school/blob/master/erd_proj4.jpg" alt="ERD Diagram">
