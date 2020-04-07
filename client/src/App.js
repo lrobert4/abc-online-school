@@ -5,7 +5,7 @@ import SubjectList from './components/SubjectList';
 import SubjectLessDetails from './components/SubjectLessDetails'
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
-import './App.css';
+
 
 
 class App extends Component {

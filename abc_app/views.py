@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from .serializers import SubjectSerializer, LessonSerializer, QuizSerializer
-from .models import Subject, Lesson, Quiz
+from .serializers import SubjectSerializer, LessonSerializer
+from .models import Subject, Lesson
 
 
 class SubjectView(viewsets.ModelViewSet):
@@ -12,7 +12,4 @@ class LessonView(viewsets.ModelViewSet):
     queryset = Lesson.objects.all()
     serializer_class = LessonSerializer
 
-class QuizView(viewsets.ModelViewSet):
-    queryset = Quiz.objects.all()
-    serializer_class = QuizSerializer
 

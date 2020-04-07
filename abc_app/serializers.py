@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Subject, Lesson, Quiz
+from .models import Subject, Lesson
 
 
 class LessonSerializer(serializers.ModelSerializer):
@@ -14,9 +14,6 @@ class SubjectSerializer(serializers.ModelSerializer):
         model = Subject
         fields = ('id', 'name', 'lessons')
 
-class QuizSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Quiz
-        fields = ('__all__')
+
 
 
