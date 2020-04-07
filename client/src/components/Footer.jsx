@@ -5,7 +5,7 @@ export default class Footer extends Component {
         return (
             <div>
 
-                <footer className="py-5 bg-dark">
+                <footer className="py-5 bg-dark footer">
                     <div className="container">
                     <p className="m-0 text-center text-white">Copyright &copy; ABC123 Learning 2020</p>
                     </div>

@@ -6,6 +6,7 @@ import SubjectLessDetails from './components/SubjectLessDetails'
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import NoteList from './components/NoteList';
+import NoteForm from './components/NoteForm';
 
 
 
@@ -15,7 +16,7 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <Navigation/>
-                    <div>
+                    <div className="secondary-nav">
                         <h1>ABC123 Online School</h1>
                         <div>
                             <div><Link to="/">Back to Dashboard</Link></div>
@@ -27,6 +28,7 @@ class App extends Component {
                         <Route path="/subject/:id" component={Subject}/>
                         <Route path="/lessons/:id" component={SubjectLessDetails}/>
                         <Route path="/notes/" component={NoteList}/>
+                        <Route path="/notesform/" component={NoteForm}/>
                     </Switch>
                     <Footer/>
                 </div>

@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import axios from 'axios';
+import NoteForm from '../components/NoteForm';
 
 class NoteList extends Component {
     state = {
         error: '',
-        notes: []
+        notes: [],
     }
 
     componentDidMount(){
@@ -24,15 +25,19 @@ class NoteList extends Component {
         }
     }
 
+
     render() {
         if (this.state.error){
             return <div>{this.state.error}</div>
         }
         return (
             <div>
-                <h1>My Notes</h1>
+                
                 <Container>
+                    <h1>Professor Notes</h1>
                     <Row>
+                    
+                    
                         {this.state.notes.map(note => (
                             <Col>
                                 <div key={note.id}>
@@ -40,8 +45,33 @@ class NoteList extends Component {
                                 </div>
                             </Col>
                         ))}
+                    
                     </Row>
+                    
+                    
+                    
                 </Container>
+
+                <Container>
+                <Row>
+                    <Col>
+                    <div className="center-align">
+                        <Link to={`/notesform/`} ><button className="btn btn-primary" type="submit">Create Personal Notes Now</button></Link>
+                    </div>
+                    </Col>
+                </Row>
+                </Container>
+                
+                <Container>
+                <Row>
+                    <Col>
+                        <h3>Personal Notes</h3>
+                    </Col>
+                    
+                </Row>
+                </Container>
+
+                
             </div>
         );
     }

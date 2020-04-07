@@ -6,6 +6,14 @@ h1 {
     text-align: center;
 }
 
+.secondary-nav h1 {
+    text-align: center;
+}
+
 div {
     text-align: center;
+}
+
+.footer {
+    margin-top: 30px;
 }
