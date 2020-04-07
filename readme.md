@@ -3,7 +3,7 @@
 A web application that education professionals can use to facilitate their courses online. 
 
 ## User Story
-Technology has advanced so much that the demand for remote learning has tremedously increased. Consumers or prospective students like the convenience factor and enables them to maintain a healthy work-life balance. 
+Technology has advanced so much that the demand for remote learning has tremedously increased. Consumers or prospective students like the convenience factor and enables them to maintain a healthy work-life balance while learning a new skill. 
 
 Educational professionals with use of this platform are able to facilitate to their markets needs. Also they are able to archive content and dynamically change information in a matter of seconds, as oppose to supporting documents already printed out. 
 
