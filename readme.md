@@ -8,7 +8,7 @@ Technology has advanced so much that the demand for remote learning has tremedou
 Educational professionals with use of this platform are able to facilitate to their markets needs. Also they are able to archive content and dynamically change information in a matter of seconds, as oppose to supporting documents already printed out. 
 
 ## Heroku App Link (VIEW APP HERE)
-Live App Link: 
+Live App Link: https://aqueous-refuge-62739.herokuapp.com/
 
 ## Trello Project Board
 View Here: https://trello.com/b/eCqOwL5P/abc123-online-school
