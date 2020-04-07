@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import Subject, Lesson
+from .models import Subject, Lesson, Note
 
-admin.site.register([Subject, Lesson])
+admin.site.register([Subject, Lesson, Note])

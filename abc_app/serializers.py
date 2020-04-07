@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from .models import Subject, Lesson
+from .models import Subject, Lesson, Note
 
 
 class LessonSerializer(serializers.ModelSerializer):
@@ -13,6 +13,11 @@ class SubjectSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subject
         fields = ('id', 'name', 'lessons')
+
+class NoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Note
+        fields = '__all__'
 
 
 
