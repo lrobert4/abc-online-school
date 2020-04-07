@@ -5,6 +5,7 @@ import SubjectList from './components/SubjectList';
 import SubjectLessDetails from './components/SubjectLessDetails'
 import Navigation from './components/Navigation';
 import Footer from './components/Footer';
+import NoteList from './components/NoteList';
 
 
 
@@ -25,6 +26,7 @@ class App extends Component {
                         <Route exact path="/" component={SubjectList}/>
                         <Route path="/subject/:id" component={Subject}/>
                         <Route path="/lessons/:id" component={SubjectLessDetails}/>
+                        <Route path="/notes/" component={NoteList}/>
                     </Switch>
                     <Footer/>
                 </div>
